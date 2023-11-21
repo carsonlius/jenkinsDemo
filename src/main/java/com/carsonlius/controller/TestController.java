@@ -3,6 +3,7 @@ package com.carsonlius.controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -23,4 +24,14 @@ public class TestController {
         response.put("message", "请求成功");
         return response;
     }
+
+    @GetMapping("/test2")
+    public Object test2(){
+        Map<String, Object> response = new HashMap<>();
+        response.put("code", "0");
+        response.put("message", "恭喜你成功使用jenkins部署项目");
+        response.put("data", new ArrayList<String>());
+        return response;
+    }
+
 }
